@@ -203,6 +203,15 @@ overflow: hidden;
     bottom: 0;
     left: 120px;
     transition: 0.5s;
+    animation: snowman 1s infinite;
+}
+@keyframes snowman{
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 .text-container{
     position: absolute;
