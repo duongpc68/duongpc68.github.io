@@ -20,9 +20,6 @@ kết quả: 1 ngày, 0 năm*/
         int totalSeconds = h * 3600 + m * 60 + s;
         int days = totalSeconds / 86400;
         int years = (days / 365);
-        if(h == 0 && totalSeconds % 86400 != 0 ){
-            days += 1;
-        }
         System.out.println("Số ngày là: " +days+ "ngày");
         System.out.println("Số năm là: " +years+ "năm");
     }
