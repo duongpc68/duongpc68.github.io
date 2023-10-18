@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#student-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#student-info-form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#student-info-form .form-group {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#student-info-form label {
+    width: 100%;
+}
+
+#student-info-form input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#student-info-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#student-info-form button#save-btn {
+    background-color: #4CAF50;
+}
+
+#student-info-form button#reset-btn {
+    background-color: #f44336;
+}
+
+#student-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#student-table table {
+    width: 400px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#student-table table, th, td {
+    border: 1px solid #ccc;
+}
+
+#student-table th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+#student-table th {
+    background-color: #f0f0f0;
+}
+
+#edit-btn, #delete-btn {
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#edit-btn {
+    background-color: #2196F3;
+}
+
+#delete-btn {
+    background-color: #f44336;
+}
+
+#edit-btn:disabled, #delete-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="student-form">
+        <h3>Student Form</h3>
+        <form id="student-info-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter full name" maxlength="50" required>
+                <div class="error-message" id="error-name"></div>
+            </div>
+            <div class="form-group">
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" required>
+                <div class="error-message" id="error-birthday"></div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Mobile Phone:</label>
+                <input type="tel" id="phone" placeholder="Enter mobile phone (10 digits)" pattern="[0-9]{10}" required>
+                <div class="error-message" id="error-phone"></div>
+            </div>
+            <div class="form-group">
+                <label for="hometown">Hometown:</label>
+                <input type="text" id="hometown" placeholder="Enter hometown" required>
+                <div class="error-message" id="error-hometown"></div>
+            </div>
+            <button type="submit" id="save-btn">Save</button>
+            <button type="button" id="reset-btn">Reset</button>
+        </form>
+    </div>
+
+    <div id="student-table">
+        <h3>Students</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Name</th>
+                    <th>Birthday</th>
+                    <th>Mobile Phone</th>
+                    <th>Hometown</th>
+                </tr>
+            </thead>
+            <tbody id="student-list"></tbody>
+        </table>
+    </div>
+<div class="button-container">
+    <button type="button" id="edit-btn" disabled>Edit</button>
+    <button type="button" id="delete-btn" disabled>Delete</button>
+</div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
