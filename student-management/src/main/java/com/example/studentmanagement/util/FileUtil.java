@@ -3,7 +3,6 @@ package com.example.studentmanagement.util;
 import com.google.gson.Gson;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
@@ -22,7 +21,6 @@ import java.util.List;
 @Component
 @AllArgsConstructor
 public class FileUtil<T> {
-
     private final Gson gson;
 
     public List<T> readDataFromFile(String filePath, Type targetClass) {
@@ -33,7 +31,7 @@ public class FileUtil<T> {
         // java NIO
         File folder;
         try {
-            folder = new ClassPathResource("data" + File.separator + filePath + ".json").getFile();
+            folder = new File(filePath);
             if (folder.isFile()) {
                 fileDataStr = new String(Files.readAllBytes(Paths.get(folder.getAbsolutePath())));
             }
@@ -47,10 +45,10 @@ public class FileUtil<T> {
         if (!StringUtils.hasText(filePath)) {
             return;
         }
-        File folder;
+        File folder = null;
         Writer writer = null;
         try {
-            folder = new ClassPathResource("data" + File.separator + filePath + ".json").getFile();
+            folder = new File(filePath);
             writer = new FileWriter(folder);
             gson.toJson(data, writer);
         } catch (IOException e) {
@@ -65,5 +63,7 @@ public class FileUtil<T> {
             }
         }
     }
+
+
 
 }
