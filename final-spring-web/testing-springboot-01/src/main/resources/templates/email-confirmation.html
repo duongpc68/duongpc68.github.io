@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: html_head(pageTitle = 'Appointment Confirm')}"></head>
+<body>
+<h1>Appointment Confirmed</h1>
+<p>Your appointment has been confirmed. Details:</p>
+<p>ID: <span th:text="${app.id}"></span></p>
+<p>Name: <span th:text="${app.customerName}"></span></p>
+<p>Phone: <span th:text="${app.customerPhone}"></span></p>
+<p>Email: <span th:text="${app.customerEmail}"></span></p>
+<p>Details: <span th:text="${app.appointmentDetails}"></span></p>
+<p>Status: <span th:text="${app.status}"></span></p>
+<p>Create Time: <span th:text="${app.createTime}"></span></p>
+<p>Approval Time: <span th:text="${app.approvalTime}"></span></p>
+</body>
+<div th:replace="~{fragments/embedded-js :: embedded-js}"></div>
+</html>
