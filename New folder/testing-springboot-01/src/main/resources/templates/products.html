@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: html_head(pageTitle = 'Admin')}"></head>
+
+</head>
+<body>
+<div class="container-fluid">
+  <!--    <div class="row">-->
+  <!--        <div class="col px-0">-->
+  <!--            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">-->
+  <!--                <ul class="navbar-nav">-->
+  <!--                    <li class="nav-item active">-->
+  <!--                        <a class="nav-link" th:href="@{/books}">Quản lý sách</a>-->
+  <!--                    </li>-->
+  <!--                    <li class="nav-item">-->
+  <!--                        <a class="nav-link" th:href="@{/book-borrows}">Quản lý MƯỢN sách</a>-->
+  <!--                    </li>-->
+  <!--                </ul>-->
+  <!--            </nav>-->
+  <!--        </div>-->
+  <!--    </div>-->
+  <!--    <div th:replace="~{fragments/navbar :: my-navbar}"></div>-->
+  <div class="row mb-2">
+    <div class="col text-center">
+      <h1>Danh Sách Sản Phẩm</h1>
+    </div>
+  </div>
+
+  <div class="row my-5">
+    <div class="col">
+      <span class="btn btn-success create-product-btn">Add Product</span>
+      <!--            <a href="/book-borrows/initialization" class="btn btn-primary ml-3">Borrow book</a>-->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+          <th>No.</th>
+          <th>Product's Name</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Image</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="sp : ${dsSanPham}">
+          <td th:text="${sp.id}"></td>
+          <td th:text="${sp.productName}"></td>
+          <td th:text="${sp.price}"></td>
+          <td th:text="${sp.description}"></td>
+<!--          <td th:text="${sv.className}"></td>-->
+          <td>
+            <a class="btn btn-primary btn-sm update-product-modal-open" >
+              <i class="far fa-edit" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div th:replace="~{fragments/product-creation-modal :: product-creation-modal}"></div>
+<!--<div th:replace="~{fragments/student-delete-modal :: student-delete-modal}"></div>-->
+<!--<div th:replace="~{fragments/student-update-modal :: student-update-modal}"></div>-->
+</body>
+<div th:replace="~{fragments/embedded-js :: embedded-js}"></div>
+</html>
