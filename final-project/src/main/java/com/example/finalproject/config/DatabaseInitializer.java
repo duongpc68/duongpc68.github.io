@@ -1,3 +1,4 @@
+/*
 //package com.example.finalproject.config;
 //
 //import com.example.finalproject.entity.User;
@@ -31,11 +32,11 @@
 //            roleJpaRepository.save(userRole);
 //
 //            User quyen = userJpaRepository.findByEmail("maiquyen2403@gmail.com");
-//            if (ObjectUtils.isEmpty(quyen)) {
+//            if (ObjectUtils.isEmpty(duong)) {
 //                User user2 = new User();
-//                user2.setEmail("maiquyen2403@gmail.com");
-//                user2.setFullName("Nguyễn Thị Mai Quyên");
-//                user2.setPassword(passwordEncoder.encode("quyen")); // Encrypt the password
+//                user2.setEmail("duongpcd@gmail.com");
+//                user2.setFullName("Phạm Cao Dương");
+//                user2.setPassword(passwordEncoder.encode("duong")); // Encrypt the password
 //                Set<Role> roles2 = new HashSet<>();
 //                roles2.add(userRole);
 //                user2.setRoles(roles2);
@@ -66,3 +67,4 @@
 //
 //
 //}
+*/

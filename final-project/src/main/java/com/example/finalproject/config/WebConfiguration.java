@@ -20,17 +20,24 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
 
         registry.addResourceHandler("/css/**")
-                .addResourceLocations("classpath:/static/css/")
+                .addResourceLocations("classpath:static/css/")
                 .setCacheControl(CacheControl.maxAge(2, TimeUnit.HOURS).cachePublic());
         registry.addResourceHandler("/js/**")
-                .addResourceLocations("classpath:/static/js/")
+                .addResourceLocations("classpath:static/js/")
                 .setCacheControl(CacheControl.maxAge(2, TimeUnit.HOURS).cachePublic());
         registry.addResourceHandler("/images/**")
-                .addResourceLocations("classpath:/static/images/")
+                .addResourceLocations("classpath:static/images/")
                 .setCacheControl(CacheControl.maxAge(2, TimeUnit.HOURS).cachePublic());
-        registry.addResourceHandler("/fonts/**")
-                .addResourceLocations("classpath:/static/fonts/")
+        registry.addResourceHandler("/webfonts/**")
+                .addResourceLocations("classpath:static/webfonts/")
                 .setCacheControl(CacheControl.maxAge(2, TimeUnit.HOURS).cachePublic());
+        registry.addResourceHandler("/video/**")
+                .addResourceLocations("classpath:static/video")
+                .setCacheControl(CacheControl.maxAge(2, TimeUnit.HOURS).cachePublic());
+        registry.addResourceHandler("/sass/**")
+                .addResourceLocations("classpath:static/sass")
+                .setCacheControl(CacheControl.maxAge(2, TimeUnit.HOURS).cachePublic());
+
     }
 
 //    @Override

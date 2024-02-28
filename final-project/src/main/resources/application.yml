@@ -11,8 +11,8 @@ spring:
       ddl-auto: update
   mail:
     host: smtp.gmail.com
-    username:
-    password:
+    username: duongpcd
+    password: wgcc hgxl tyjd xlvj
     port: 587
     properties:
       mail:
@@ -26,7 +26,7 @@ spring:
     encoding: UTF-8
     prefix: file:src/main/resources/templates/
     resources: # Static resources
-      static-locations: file:src/main/resources/static/
+      static-locations: file:src/main/resources/
       cache:
         period: 0
 application:
